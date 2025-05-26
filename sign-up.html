@@ -1,181 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Folio - Multipurpose Bootstrap Theme</title>
 
-<!-- Mirrored from folio.webestica.com/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 May 2025 10:24:22 GMT -->
-<head>
-	
-	<title>Folio - Multipurpose Bootstrap Theme</title>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="Tanbits" />
+    <meta
+      name="description"
+      content="The page you're looking for does not exist. Visit Tanbits to explore our software development services in HTML, CSS, JavaScript, and more."
+    />
 
-	<!-- Meta Tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="webestica.com">
-	<meta name="description" content="multipurpose bootstrap theme">
+    <meta
+      name="keywords"
+      content="tanbits, bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, light and dark mode, html5, css3, javascript, gallery, slider, touch, creative, artificial intelligence, AI solutions, AI development, machine learning, natural language processing, AI-powered apps, AI integration, chatbot development, computer vision, data analytics, predictive analytics, deep learning, AI automation, AI consulting"
+    />
 
-	<!-- Dark mode -->
-	<script>
-		const storedTheme = localStorage.getItem('theme')
- 
-		const getPreferredTheme = () => {
-			if (storedTheme) {
-				return storedTheme
-			}
-			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
-		}
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Sign Up | Tanbits - Software Development Company"
+    />
+    <meta
+      name="twitter:description"
+      content="Learn more about Tanbits, a leading software development company offering expert solutions in web, mobile, and AI technologies."
+    />
+    <meta name="twitter:image" content="assets/images/about/about-banner.png" />
 
-		const setTheme = function (theme) {
-			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				document.documentElement.setAttribute('data-bs-theme', 'dark')
-			} else {
-				document.documentElement.setAttribute('data-bs-theme', theme)
-			}
-		}
+    <!-- Dark mode -->
+    <script>
+      const storedTheme = localStorage.getItem("theme");
 
-		setTheme(getPreferredTheme())
+      const getPreferredTheme = () => {
+        if (storedTheme) {
+          return storedTheme;
+        }
+        return window.matchMedia("(prefers-color-scheme: light)").matches
+          ? "light"
+          : "light";
+      };
 
-		window.addEventListener('DOMContentLoaded', () => {
-		    var el = document.querySelector('.theme-icon-active');
-			if(el != 'undefined' && el != null) {
-				const showActiveTheme = theme => {
-				const activeThemeIcon = document.querySelector('.theme-icon-active use')
-				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+      const setTheme = function (theme) {
+        if (
+          theme === "auto" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+          document.documentElement.setAttribute("data-bs-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-bs-theme", theme);
+        }
+      };
 
-				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-					element.classList.remove('active')
-				})
+      setTheme(getPreferredTheme());
 
-				btnToActive.classList.add('active')
-				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-			}
+      window.addEventListener("DOMContentLoaded", () => {
+        var el = document.querySelector(".theme-icon-active");
+        if (el != "undefined" && el != null) {
+          const showActiveTheme = (theme) => {
+            const activeThemeIcon = document.querySelector(
+              ".theme-icon-active use"
+            );
+            const btnToActive = document.querySelector(
+              `[data-bs-theme-value="${theme}"]`
+            );
+            const svgOfActiveBtn = btnToActive
+              .querySelector(".mode-switch use")
+              .getAttribute("href");
 
-			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-				if (storedTheme !== 'light' || storedTheme !== 'dark') {
-					setTheme(getPreferredTheme())
-				}
-			})
+            document
+              .querySelectorAll("[data-bs-theme-value]")
+              .forEach((element) => {
+                element.classList.remove("active");
+              });
 
-			showActiveTheme(getPreferredTheme())
+            btnToActive.classList.add("active");
+            activeThemeIcon.setAttribute("href", svgOfActiveBtn);
+          };
 
-			document.querySelectorAll('[data-bs-theme-value]')
-				.forEach(toggle => {
-					toggle.addEventListener('click', () => {
-						const theme = toggle.getAttribute('data-bs-theme-value')
-						localStorage.setItem('theme', theme)
-						setTheme(theme)
-						showActiveTheme(theme)
-					})
-				})
+          window
+            .matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", () => {
+              if (storedTheme !== "light" || storedTheme !== "dark") {
+                setTheme(getPreferredTheme());
+              }
+            });
 
-			}
-		})
-		
-	</script>
+          showActiveTheme(getPreferredTheme());
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="assets/images/favicon.ico">
+          document
+            .querySelectorAll("[data-bs-theme-value]")
+            .forEach((toggle) => {
+              toggle.addEventListener("click", () => {
+                const theme = toggle.getAttribute("data-bs-theme-value");
+                localStorage.setItem("theme", theme);
+                setTheme(theme);
+                showActiveTheme(theme);
+              });
+            });
+        }
+      });
+    </script>
 
-	<!-- Google Font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
-	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-	
-	<!-- Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <!-- Plugins CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    />
 
-<body>
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
 
-<!-- **************** MAIN CONTENT START **************** -->
-<main>
-	<section class="bg-secondary position-relative vh-100">
-		<div class="container h-100 d-flex flex-column justify-content-center">
-			<div class="row justify-content-center align-items-center">
-				<!-- Main content START -->
-				<div class="col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-5 position-relative">
-					<!-- UFO decoration -->
-					<div class="vert-move position-absolute top-0 start-0 ms-n5 mt-n5 z-index-9 d-none d-sm-block">
-						<img src="assets/images/elements/ufo.png" class="h-100px rotate-343" alt="ufo image">
-					</div>
-					<!-- Blur ring decoration -->
-					<div class="position-absolute bottom-0 end-0 mb-n8 me-n5 d-none d-sm-block">
-						<img src="assets/images/elements/grad-shape/blur-decoration.svg" class="blur-8 opacity-2" alt="Grad shape">
-					</div>
+  <body>
+    <!-- **************** MAIN CONTENT START **************** -->
+    <main>
+      <section class="bg-secondary position-relative vh-100">
+        <div class="container h-100 d-flex flex-column justify-content-center">
+          <div class="row justify-content-center align-items-center">
+            <!-- Main content START -->
+            <div
+              class="col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-5 position-relative"
+            >
+              <!-- UFO decoration -->
+              <div
+                class="vert-move position-absolute top-0 start-0 ms-n5 mt-n5 z-index-9 d-none d-sm-block"
+              >
+                <img
+                  src="assets/images/elements/ufo.png"
+                  class="h-100px rotate-343"
+                  alt="ufo image"
+                />
+              </div>
+              <!-- Blur ring decoration -->
+              <div
+                class="position-absolute bottom-0 end-0 mb-n8 me-n5 d-none d-sm-block"
+              >
+                <img
+                  src="assets/images/elements/grad-shape/blur-decoration.svg"
+                  class="blur-8 opacity-2"
+                  alt="Grad shape"
+                />
+              </div>
 
-					<!-- Sign up START -->
-					<div class="card card-body bg-body bg-opacity-25 bg-blur border border-white border-opacity-10 position-relative rounded-4 shadow-primary text-center p-4 p-sm-5">
-						<!-- Title -->
-						<h1 class="mb-2 h3 fw-bold">Create Account</h1>
-						<p class="mb-0">Already have an account?<a href="sign-in.html" class="text-primary-grad"> Sign in here</a></p>
-						<!-- Form START -->
-						<form class="mt-2 mt-sm-4">
-							<!-- Name -->
-							<div class="mb-3">
-								<input type="text" class="form-control" placeholder="Enter your name">
-							</div>
-							<!-- Email -->
-							<div class="mb-3">
-								<input type="email" class="form-control" placeholder="Enter email">
-							</div>
-							<!-- New password -->
-							<div class="mb-3 position-relative">
-								<!-- Password -->
-								<div class="mb-3 position-relative">
-									<input type="password" class="form-control fakepassword pe-6" id="psw-input" placeholder="Enter your password">
-									<span class="position-absolute top-50 end-0 translate-middle-y p-0 me-2">
-										<i class="fakepasswordicon bi bi-eye-slash-fill cursor-pointer p-2"></i>
-									</span>
-								</div>
-							</div>
-							<!-- Remember me -->
-							<div class="mb-3 text-start form-check">
-								<input type="checkbox" class="form-check-input border" id="exampleCheck1">
-								<label class="form-check-label small" for="exampleCheck1">I agree to all Terms & conditions and the privacy policy.</label>
-							</div>
-							
-							<!-- Button -->
-							<div class="d-grid"><button type="submit" class="btn btn-primary">Create an account</button></div>
+              <!-- Sign up START -->
+              <div
+                class="card card-body bg-body bg-opacity-25 bg-blur border border-white border-opacity-10 position-relative rounded-4 shadow-primary text-center p-4 p-sm-5"
+              >
+                <!-- Title -->
+                <h1 class="mb-2 h3 fw-bold">Create Account</h1>
+                <p class="mb-0">
+                  Already have an account?<a
+                    href="sign-in.html"
+                    class="text-primary-grad"
+                  >
+                    Sign in here</a
+                  >
+                </p>
+                <!-- Form START -->
+                <form class="mt-2 mt-sm-4">
+                  <!-- Name -->
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <!-- Email -->
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <!-- New password -->
+                  <div class="mb-3 position-relative">
+                    <!-- Password -->
+                    <div class="mb-3 position-relative">
+                      <input
+                        type="password"
+                        class="form-control fakepassword pe-6"
+                        id="psw-input"
+                        placeholder="Enter your password"
+                      />
+                      <span
+                        class="position-absolute top-50 end-0 translate-middle-y p-0 me-2"
+                      >
+                        <i
+                          class="fakepasswordicon bi bi-eye-slash-fill cursor-pointer p-2"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Remember me -->
+                  <div class="mb-3 text-start form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input border"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label small" for="exampleCheck1"
+                      >I agree to all Terms & conditions and the privacy
+                      policy.</label
+                    >
+                  </div>
 
-							<!-- Divider -->
-							<div class="d-flex align-items-center my-3">
-								<hr class="w-100">
-								<p class="small px-4 mb-0">Or</p>
-								<hr class="w-100">
-							</div>
+                  <!-- Button -->
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">
+                      Create an account
+                    </button>
+                  </div>
 
-							<!-- Facebook and google button -->
-							<div class="d-flex justify-content-center gap-3">
-								<a class="btn btn-icon bg-facebook" href="#"><i class="bi bi-facebook lh-base"></i></a>
-								<a class="btn btn-icon border bg-white" href="#"><i class="bi bi-google lh-base text-google-icon"></i></a>
-							</div>
+                  <!-- Divider -->
+                  <div class="d-flex align-items-center my-3">
+                    <hr class="w-100" />
+                    <p class="small px-4 mb-0">Or</p>
+                    <hr class="w-100" />
+                  </div>
 
-							<!-- Copyright -->
-							<div class="text-body small mt-3"> Copyrights ©2024 Folio. Build by <a href="https://www.webestica.com/" target="_blank" class="text-body text-primary-hover hover-underline-animation">Webestica</a>. </div>
-						</form>
-						<!-- Form END -->
-					</div>
-					<!-- Sign up END -->
-				</div>
-			</div> <!-- Row END -->
-		</div>
-	</section>
-</main>
-<!-- **************** MAIN CONTENT END **************** -->
+                  <!-- Facebook and google button -->
+                  <div class="d-flex justify-content-center gap-3">
+                    <a class="btn btn-icon bg-facebook" href="#"
+                      ><i class="bi bi-facebook lh-base"></i
+                    ></a>
+                    <a class="btn btn-icon border bg-white" href="#"
+                      ><i class="bi bi-google lh-base text-google-icon"></i
+                    ></a>
+                  </div>
 
-<!-- Back to top -->
-<div class="back-top"></div>
+                  <!-- Copyright -->
+                  <div class="text-body small mt-3">
+                    Copyrights ©2024 Folio. Build by
+                    <a
+                      href="https://tanbits.com/"
+                      target="_blank"
+                      class="text-body text-primary-hover hover-underline-animation"
+                      >Tanbits</a
+                    >.
+                  </div>
+                </form>
+                <!-- Form END -->
+              </div>
+              <!-- Sign up END -->
+            </div>
+          </div>
+          <!-- Row END -->
+        </div>
+      </section>
+    </main>
+    <!-- **************** MAIN CONTENT END **************** -->
 
-<!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Back to top -->
+    <div class="back-top"></div>
 
-<!-- Theme Functions -->
-<script src="assets/js/functions.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
-
-<!-- Mirrored from folio.webestica.com/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 May 2025 10:24:22 GMT -->
+    <!-- Theme Functions -->
+    <script src="assets/js/functions.js"></script>
+  </body>
 </html>

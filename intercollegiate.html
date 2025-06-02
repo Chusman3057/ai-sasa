@@ -134,6 +134,37 @@
       href="assets/vendor/swiper/swiper-bundle.min.css"
     />
 
+    <!-- Contact Form Messages -->
+    <style>
+      .success-message {
+        display: none;
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+        padding: 1rem;
+        border-radius: 0.375rem;
+        margin-bottom: 1rem;
+        transition: opacity 0.5s ease-out;
+      }
+      .error-message {
+        display: none;
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        padding: 1rem;
+        border-radius: 0.375rem;
+        margin-bottom: 1rem;
+        transition: opacity 0.5s ease-out;
+      }
+      .fade-out {
+        opacity: 0;
+      }
+      .loading {
+        opacity: 0.7;
+        pointer-events: none;
+      }
+    </style>
+
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
@@ -341,7 +372,7 @@
             </div>
             <!-- Content -->
             <div class="col-md-8 ms-auto">
-              <p class="lead">
+              <p class="">
                 Intercollegiate is the premier job board and career advancement
                 platform dedicated exclusively to college athletics.
               </p>
@@ -406,17 +437,17 @@
               <div class="row">
                 <div class="">
                   <ul class="list-group list-group-borderless">
-                    <li class="list-group-item d-flex heading-color">
+                    <li class="list-group-item d-flex">
                       <i class="bi bi-check-circle text-primary me-2"></i>
                       AI-driven resume-to-role matching helps candidates
                       identify where they’re most likely to succeed.
                     </li>
-                    <li class="list-group-item d-flex heading-color">
+                    <li class="list-group-item d-flex">
                       <i class="bi bi-check-circle text-primary me-2"></i>
                       Smart interview prep tools simulate potential interview
                       questions and generate custom 30-60-90 day plans.
                     </li>
-                    <li class="list-group-item d-flex heading-color">
+                    <li class="list-group-item d-flex">
                       <i class="bi bi-check-circle text-primary me-2"></i>
                       Recruiters gain access to profile recommendations and
                       filters enhanced by AI pattern recognition, improving
@@ -440,32 +471,32 @@
               <div class="row">
                 <div class="">
                   <ul class="list-group list-group-borderless">
-                    <li class="list-group-item d-flex heading-color">
+                    <li class="list-group-item d-flex">
                       <i class="bi bi-check-circle text-primary me-2"></i>
                       Access all open roles in college athletics across every
                       institution and division.
                     </li>
-                    <li class="list-group-item d-flex heading-color">
+                    <li class="list-group-item d-flex">
                       <i class="bi bi-check-circle text-primary me-2"></i>
                       View in-depth insights about departments, including
                       structure, staff changes, and institutional culture.
                     </li>
-                    <li class="list-group-item d-flex heading-color">
+                    <li class="list-group-item d-flex">
                       <i class="bi bi-check-circle text-primary me-2"></i>
                       Understand real career journeys of professionals in
                       college athletics to help plan your next move.
                     </li>
-                    <li class="list-group-item d-flex heading-color">
+                    <li class="list-group-item d-flex">
                       <i class="bi bi-check-circle text-primary me-2"></i>
                       Set filters and receive AI-ranked alerts tailored to your
                       interests, region, and specialization.
                     </li>
-                    <li class="list-group-item d-flex heading-color">
+                    <li class="list-group-item d-flex">
                       <i class="bi bi-check-circle text-primary me-2"></i>
                       Get instant feedback on how your resume matches a role and
                       what to improve for better alignment.
                     </li>
-                    <li class="list-group-item d-flex heading-color">
+                    <li class="list-group-item d-flex">
                       <i class="bi bi-check-circle text-primary me-2"></i>
                       AI helps recruiters find and rank ideal candidates quickly
                       based on relevance and availability.
@@ -494,10 +525,13 @@
                 toward a more intentional, outcome-driven culture. -->
               </p>
               <p class="mb-0">
-                <!-- Companies experienced a 30–50% increase in OKR update
-                consistency across teams using asynchronous check-ins and
-                improved team clarity and motivation due to alignment between
-                weekly work and quarterly goals. -->
+                Intercollegiate has earned praise from both job seekers and
+                recruiters for its smart, intuitive design tailored to the
+                college athletics space. Users report greater alignment between
+                their profiles and job roles due to AI-enhanced matching, while
+                features like resume analysis and predictive fit scores
+                significantly cut down the time spent searching for the right
+                opportunity.
               </p>
             </div>
           </div>
@@ -616,6 +650,101 @@
         </div>
       </section>
       <!-- Related works END -->
+
+      <!-- Contact form START -->
+      <section class="position-relative pt-0" id="contact-us">
+        <div class="container bg-secondary-grad rounded-4 p-4 p-md-6 p-xxl-8">
+          <div class="inner-container-small">
+            <!-- Title -->
+            <h1 class="fw-bold mb-2 lh-base text-center">
+              <i class="bi bi-emoji-smile me-2"></i>Say
+              <span
+                class="cd-headline clip big-clip is-full-width text-primary-grad mb-0"
+              >
+                <span
+                  class="typed"
+                  data-type-text="Hello&&Hola&&Ciao&&Bonjour"
+                ></span>
+              </span>
+            </h1>
+            <p class="text-center">
+              Have an idea, need advice, or just want to say hello? We’re all
+              ears.
+            </p>
+
+            <!-- Form START -->
+            <form
+              id="contactForm"
+              class="row form-border-transparent g-3 mt-4"
+              action="https://formspree.io/f/xqabkkwj"
+              method="POST"
+            >
+              <div class="col-md-6">
+                <label class="form-label">Your name</label>
+                <input type="text" class="form-control" name="name" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Mobile number</label>
+                <input type="text" class="form-control" name="mobile" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Subject</label>
+                <input type="text" class="form-control" name="subject" />
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea
+                  name="message"
+                  required
+                  class="form-control"
+                  id="floatingTextarea2"
+                  style="height: 100px"
+                ></textarea>
+              </div>
+
+              <div class="col-12 d-sm-flex align-items-center gap-3 mt-4">
+                <button
+                  class="btn btn-primary mb-2 mb-md-0"
+                  type="submit"
+                  id="submitBtn"
+                >
+                  <span class="button-text">Send a request</span>
+                  <span
+                    class="spinner-border spinner-border-sm d-none"
+                    role="status"
+                  ></span>
+                </button>
+              </div>
+
+              <div class="success-message mt-2" id="successMessage">
+                <strong>Thank you!</strong> Your message has been sent
+                successfully. We'll get back to you soon!
+              </div>
+
+              <div class="error-message mt-2" id="errorMessage">
+                <strong>Oops!</strong> Something went wrong. Please try again
+                later.
+              </div>
+            </form>
+            <!-- Form END -->
+          </div>
+        </div>
+      </section>
+      <!-- Contact form END -->
     </main>
     <!-- **************** MAIN CONTENT END **************** -->
 
@@ -641,17 +770,17 @@
             </a>
 
             <p class="my-3 my-lg-4">
-              A Bootstrap theme that's both stylish and functional, perfect for
-              any type of technology or corporate website.
+              We design smart, scalable AI products for modern businesses. From
+              prototypes to full-scale intelligent systems.
             </p>
             <!-- List -->
             <ul class="list-group list-group-borderless">
-              <li class="d-flex mb-2">
+              <!-- <li class="d-flex mb-2">
                 <a href="#" class="text-primary-hover"
                   ><i class="me-2 text-primary bi bi-headset"></i> (251)
                   854-6308
                 </a>
-              </li>
+              </li> -->
               <li class="d-flex mb-2">
                 <a href="#" class="text-primary-hover"
                   ><i class="me-2 text-primary bi bi-envelope"></i>
@@ -724,7 +853,7 @@
         >
           <!-- copyright text -->
           <div class="text-body small mb-3 mb-md-0">
-            Copyrights ©2024 Folio. Build by
+            Copyrights ©2024 Folio. Built by
             <a
               href="https://tanbits.com/"
               target="_blank"
@@ -748,7 +877,85 @@
     <script src="assets/vendor/jarallax/jarallax.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+    <script src="assets/vendor/ityped/index.js"></script>
+
     <!-- Theme Functions -->
     <script src="assets/js/functions.js"></script>
+
+    <!-- Contact Us form -->
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const formData = new FormData(form);
+          const submitBtn = document.getElementById("submitBtn");
+          const buttonText = submitBtn.querySelector(".button-text");
+          const spinner = submitBtn.querySelector(".spinner-border");
+          const successMessage = document.getElementById("successMessage");
+          const errorMessage = document.getElementById("errorMessage");
+
+          // Hide previous messages
+          successMessage.style.display = "none";
+          errorMessage.style.display = "none";
+
+          // Show loading state
+          form.classList.add("loading");
+          buttonText.textContent = "Sending...";
+          spinner.classList.remove("d-none");
+          submitBtn.disabled = true;
+
+          try {
+            const response = await fetch("https://formspree.io/f/xjkwnzak", {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              // Success
+              successMessage.style.display = "block";
+              form.reset();
+
+              // Scroll to success message
+              successMessage.scrollIntoView({ behavior: "smooth" });
+
+              // Auto-hide success message after 5 seconds with fade effect
+              setTimeout(() => {
+                successMessage.classList.add("fade-out");
+                setTimeout(() => {
+                  successMessage.style.display = "none";
+                  successMessage.classList.remove("fade-out");
+                }, 500); // Wait for fade animation to complete
+              }, 3000);
+            } else {
+              throw new Error("Form submission failed");
+            }
+          } catch (error) {
+            // Error
+            errorMessage.style.display = "block";
+            errorMessage.scrollIntoView({ behavior: "smooth" });
+
+            // Auto-hide error message after 5 seconds with fade effect
+            setTimeout(() => {
+              errorMessage.classList.add("fade-out");
+              setTimeout(() => {
+                errorMessage.style.display = "none";
+                errorMessage.classList.remove("fade-out");
+              }, 500); // Wait for fade animation to complete
+            }, 5000);
+          } finally {
+            // Reset button state
+            form.classList.remove("loading");
+            buttonText.textContent = "Send a request";
+            spinner.classList.add("d-none");
+            submitBtn.disabled = false;
+          }
+        });
+    </script>
   </body>
 </html>
